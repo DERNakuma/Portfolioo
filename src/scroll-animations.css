@@ -1,0 +1,56 @@
+/* Initial hidden states */
+.about-section,
+.hobbies-section,
+.projects-section,
+.dashboard-section,
+.photography-section,
+.contact-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Visible states */
+.about-section.visible,
+.hobbies-section.visible,
+.projects-section.visible,
+.dashboard-section.visible,
+.photography-section.visible,
+.contact-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animations for cards */
+.hobby-card,
+.project-card,
+.dashboard-card,
+.photo-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.hobby-card.visible,
+.project-card.visible,
+.dashboard-card.visible,
+.photo-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay for staggered effect */
+.hobby-card:nth-child(1).visible { transition-delay: 0.1s; }
+.hobby-card:nth-child(2).visible { transition-delay: 0.2s; }
+.hobby-card:nth-child(3).visible { transition-delay: 0.3s; }
+.hobby-card:nth-child(4).visible { transition-delay: 0.4s; }
+
+.project-card:nth-child(1).visible { transition-delay: 0.1s; }
+.project-card:nth-child(2).visible { transition-delay: 0.2s; }
+.project-card:nth-child(3).visible { transition-delay: 0.3s; }
+.project-card:nth-child(4).visible { transition-delay: 0.4s; }
+
+.dashboard-card:nth-child(1).visible { transition-delay: 0.1s; }
+.dashboard-card:nth-child(2).visible { transition-delay: 0.2s; }
+.dashboard-card:nth-child(3).visible { transition-delay: 0.3s; }
+.dashboard-card:nth-child(4).visible { transition-delay: 0.4s; }

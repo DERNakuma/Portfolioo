@@ -1,0 +1,13 @@
+.project-image.payroll {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    background-image: url('/photo/employee.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-image.address-book {
+    background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+    background-image: url('/photo/address.jpg');
+    background-size: cover;
+    background-position: center;
+}

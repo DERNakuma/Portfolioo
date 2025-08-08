@@ -1,0 +1,47 @@
+.morphing-text {
+    background: linear-gradient(45deg, #dec8c3, #ff6b35, #f7931e, #dec8c3);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: morphGradient 3s ease-in-out infinite;
+    position: relative;
+    filter: blur(0px);
+    transition: all 0.5s ease;
+}
+
+.morphing-text:hover {
+    animation-duration: 0.5s;
+    transform: skewX(-5deg);
+    filter: blur(0.5px) brightness(1.2);
+}
+
+.morphing-text::before {
+    content: 'Bhupender Singh';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #ff6b35, #f7931e, #667eea, #ff6b35);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: morphGradient 3s ease-in-out infinite reverse;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+@keyframes morphGradient {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+}

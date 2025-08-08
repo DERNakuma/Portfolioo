@@ -1,0 +1,46 @@
+.minimal-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    animation: breathe 4s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.minimal-text:hover {
+    color: #ff6b35;
+    letter-spacing: 0.1em;
+}
+
+.accent-line {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b35, transparent);
+    animation: lineGrow 3s ease-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.01);
+    }
+}
+
+@keyframes lineGrow {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        width: 60%;
+        opacity: 1;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}

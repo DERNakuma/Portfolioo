@@ -1,0 +1,17 @@
+.projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.project-content {
+    padding: 1.2rem;
+}
+
+.project-image {
+    height: 180px;
+}
